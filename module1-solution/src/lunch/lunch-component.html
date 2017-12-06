@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Lunch Checker</h1>
+      <div class="form-group">
+          <input style = "border-color:{{$ctrl.color}}" id="lunch-menu" type="text" ng-model="$ctrl.FavFood"
+          placeholder="list comma separated dishes you usually have for lunch"
+          class="form-control" required>
+      </div>
+
+      <div class="form-group">
+          <button class="btn btn-default" ng-click="$ctrl.CheckIfTooMuch()">Check If Too Much</button>
+      </div>
+      <!-- Show the message using ng-if -->
+      <div class="form-group message">
+          <div class = "enterdata" style="color:{{$ctrl.color}}" ng-if = "$ctrl.messageEnterData">Please enter data first</div>
+          <div class = "enjoy" style="color:{{$ctrl.color}}" ng-if = "$ctrl.messageEnjoy">Enjoy </div>
+          <div class = "tomuch" style="color:{{$ctrl.color}}" ng-if = "$ctrl.messageToMuch">Too much!</div>
+      </div>
+</div>
